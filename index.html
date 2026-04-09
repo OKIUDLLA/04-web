@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camelia Zlín — dárky, dekorace a půjčovna svatebních výzdob</title>
+<meta name="description" content="Camelia ve Zlíně na náměstí Míru — dárky, bytové doplňky, umělé květiny, svatební dekorace a půjčovna výzdob na oslavy a svatby.">
+<meta property="og:title" content="Camelia Zlín — dárky, dekorace a půjčovna svatebních výzdob">
+<meta property="og:description" content="Dárky, bytové doplňky a půjčovna svatebních dekorací na náměstí Míru ve Zlíně.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F1E8;
+  --cream-dark:#EFE5D3;
+  --ink:#1E1A17;
+  --ink-soft:#4A413B;
+  --burgundy:#6B1B2B;
+  --burgundy-dark:#4E0F1E;
+  --gold:#B08B4A;
+  --line:rgba(30,26,23,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:500;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:1.2rem}
+h3{font-size:1.35rem;margin-bottom:.6rem}
+p{max-width:62ch}
+a{color:inherit;text-decoration:none;transition:color .25s ease}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* nav */
+header.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,241,232,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1180px;margin:0 auto}
+.brand{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;letter-spacing:.02em}
+.brand span{color:var(--burgundy)}
+.nav-links{display:flex;gap:34px;font-size:.93rem;font-weight:400}
+.nav-links a:hover{color:var(--burgundy)}
+.nav-cta{padding:10px 20px;border:1px solid var(--ink);border-radius:999px;font-size:.88rem;transition:all .25s}
+.nav-cta:hover{background:var(--ink);color:var(--cream)}
+@media (max-width:720px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding:90px 0 110px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--burgundy);font-weight:500;margin-bottom:26px;
+}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--burgundy)}
+.hero h1{margin-bottom:26px}
+.hero h1 em{font-style:italic;color:var(--burgundy)}
+.hero .lead{font-size:1.22rem;color:var(--ink-soft);margin-bottom:38px;max-width:52ch}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:16px 30px;border-radius:999px;
+  font-size:.95rem;font-weight:500;letter-spacing:.01em;
+  transition:all .25s ease;cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{background:var(--burgundy);color:var(--cream)}
+.btn-primary:hover{background:var(--burgundy-dark);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.hero-visual{
+  position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;
+  background:linear-gradient(135deg,#8a2436 0%,#4E0F1E 60%,#2a0810 100%);
+  box-shadow:0 30px 80px -20px rgba(30,15,20,.35);
+}
+.hero-visual::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 20%,rgba(176,139,74,.35),transparent 45%),
+    radial-gradient(circle at 80% 70%,rgba(247,241,232,.18),transparent 50%);
+}
+.hero-visual-inner{
+  position:absolute;inset:0;display:flex;align-items:flex-end;
+  padding:42px;color:var(--cream);font-family:'Playfair Display',serif;
+}
+.hero-visual-inner p{font-size:1.6rem;line-height:1.3;font-style:italic;max-width:16ch}
+.hero-badge{
+  position:absolute;top:32px;right:32px;
+  background:var(--cream);color:var(--burgundy);
+  padding:14px 20px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:.78rem;
+  letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+}
+
+/* sections */
+section{padding:110px 0}
+.section-head{margin-bottom:70px;max-width:640px}
+.section-head .eyebrow{margin-bottom:18px}
+.section-head p{color:var(--ink-soft);font-size:1.1rem;margin-top:14px}
+
+/* offer grid */
+.offer{background:#fff}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media (max-width:820px){.offer-grid{grid-template-columns:1fr}}
+.offer-item{background:#fff;padding:50px 40px;transition:background .3s}
+.offer-item:hover{background:var(--cream)}
+.offer-num{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--gold);margin-bottom:18px;font-style:italic}
+.offer-item p{color:var(--ink-soft);font-size:.97rem}
+
+/* weddings — dark feature */
+.weddings{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.weddings::before{
+  content:"";position:absolute;top:-200px;right:-200px;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(176,139,74,.18),transparent 60%);pointer-events:none;
+}
+.weddings .eyebrow{color:var(--gold)}
+.weddings .eyebrow::before{background:var(--gold)}
+.weddings h2{color:var(--cream)}
+.weddings-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;position:relative}
+@media (max-width:900px){.weddings-grid{grid-template-columns:1fr;gap:50px}}
+.weddings-list{list-style:none;margin-top:32px}
+.weddings-list li{
+  padding:20px 0;border-bottom:1px solid rgba(247,241,232,.12);
+  display:flex;gap:22px;align-items:baseline;
+}
+.weddings-list li:last-child{border-bottom:none}
+.weddings-list .lnum{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.05rem;font-style:italic;min-width:32px}
+.weddings-list .ltxt{font-size:1.02rem;color:var(--cream)}
+.weddings-card{
+  background:linear-gradient(160deg,#2a2420 0%,#1E1A17 100%);
+  border:1px solid rgba(176,139,74,.3);
+  padding:50px 42px;border-radius:18px;
+}
+.weddings-card h3{font-size:1.8rem;color:var(--cream);margin-bottom:14px}
+.weddings-card p{color:rgba(247,241,232,.75);margin-bottom:30px;font-size:.97rem}
+.weddings-card .btn-primary{background:var(--gold);color:var(--ink)}
+.weddings-card .btn-primary:hover{background:#c79e5c}
+
+/* custom */
+.custom{background:var(--cream-dark)}
+.custom-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+@media (max-width:820px){.custom-grid{grid-template-columns:1fr;gap:50px}}
+.custom-visual{
+  aspect-ratio:1/1;border-radius:12px;
+  background:
+    radial-gradient(circle at 30% 30%,#d4a574 0%,#8a5a2b 40%,#3d2614 100%);
+  position:relative;overflow:hidden;
+  box-shadow:0 20px 60px -15px rgba(60,30,10,.3);
+}
+.custom-visual::after{
+  content:"Na míru";position:absolute;bottom:30px;left:30px;
+  font-family:'Playfair Display',serif;font-style:italic;font-size:2rem;color:var(--cream);
+}
+
+/* contact */
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:50px}}
+.info-row{padding:24px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:none}
+.info-label{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--burgundy);margin-bottom:8px;font-weight:500}
+.info-value{font-size:1.2rem;font-family:'Playfair Display',serif}
+.info-value a:hover{color:var(--burgundy)}
+.hours{background:var(--cream);padding:40px;border-radius:14px;border:1px solid var(--line)}
+.hours h3{margin-bottom:24px}
+.hours-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line);font-size:1rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{font-weight:500}
+.hours-row .time{color:var(--ink-soft);font-feature-settings:"tnum"}
+.hours-row.closed .time{color:var(--burgundy);font-style:italic}
+
+/* footer */
+footer{background:var(--ink);color:rgba(247,241,232,.7);padding:60px 0 40px;font-size:.9rem}
+.foot-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+footer .brand{color:var(--cream);font-size:1.6rem;margin-bottom:8px;display:block}
+footer .made-by{font-size:.78rem;color:rgba(247,241,232,.45);letter-spacing:.08em}
+footer .made-by a{color:var(--gold)}
+footer .made-by a:hover{color:#d4b57a}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:all .8s ease}
+.reveal.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">Camelia<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#nabidka">Nabídka</a>
+      <a href="#svatby">Svatby a oslavy</a>
+      <a href="#namiru">Na míru</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="tel:+420704024456" class="nav-cta">+420 704 024 456</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Zlín · Náměstí Míru</div>
+      <h1>Dárky, dekorace a <em>kouzlo svateb</em> na dosah ruky.</h1>
+      <p class="lead">Obchod Camelia ve Zlíně najdete v srdci náměstí Míru. Bytové doplňky, umělé květiny, svatební dekorace — a půjčovna výzdob, která promění vaši oslavu.</p>
+      <div class="cta-row">
+        <a href="#svatby" class="btn btn-primary">Půjčovna svatebních dekorací</a>
+        <a href="#kontakt" class="btn btn-ghost">Navštivte nás</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-badge">Od roku 2015</div>
+      <div class="hero-visual-inner">
+        <p>„Těšíme se na vaši návštěvu."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="nabidka">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Co u nás najdete</div>
+      <h2>Věci, které dělají domov i oslavu krásnější.</h2>
+      <p>Od drobných dárků až po velké dekorace na míru — v našem obchodě na náměstí Míru ve Zlíně.</p>
+    </div>
+  </div>
+  <div class="offer-grid reveal">
+    <div class="offer-item">
+      <div class="offer-num">I.</div>
+      <h3>Dárky a bytové doplňky</h3>
+      <p>Pečlivě vybrané kousky pro radost — porcelánové panenky, obrazy, hodiny, lucerny a další věci, které dotvářejí domov.</p>
+    </div>
+    <div class="offer-item">
+      <div class="offer-num">II.</div>
+      <h3>Umělé květiny a dekorace</h3>
+      <p>Široký sortiment umělých květin a tropických plodů, ze kterých sestavujeme aranžmá, jež vydrží déle než čerstvá kytice.</p>
+    </div>
+    <div class="offer-item">
+      <div class="offer-num">III.</div>
+      <h3>Svatební dekorace</h3>
+      <p>Vše pro výzdobu obřadu i hostiny — od květinových aranžmá přes stolní dekorace až po doplňky pro nevěstu a ženicha.</p>
+    </div>
+  </div>
+</section>
+
+<section class="weddings" id="svatby">
+  <div class="wrap weddings-grid">
+    <div class="reveal">
+      <div class="eyebrow">Půjčovna výzdob</div>
+      <h2>Vaše svatba nebo oslava ve velkém stylu — za zlomek nákladů.</h2>
+      <p style="color:rgba(247,241,232,.75);margin-top:20px;font-size:1.1rem">Nechcete utrácet desítky tisíc za dekorace, které po jednom dni skončí ve sklepě? V Camelii si můžete svatební a oslavovou výzdobu jednoduše zapůjčit.</p>
+      <ul class="weddings-list">
+        <li><span class="lnum">01</span><span class="ltxt">Květinové aranžmá na stoly, oblouky a výzdobu obřadu</span></li>
+        <li><span class="lnum">02</span><span class="ltxt">Lucerny, svícny a dekorativní doplňky v několika stylech</span></li>
+        <li><span class="lnum">03</span><span class="ltxt">Poradíme, jak skladbu sestavit — a vše si můžete předem prohlédnout v obchodě</span></li>
+      </ul>
+    </div>
+    <div class="weddings-card reveal">
+      <h3>Domluvíme se osobně</h3>
+      <p>Zavolejte nebo se stavte ve Zlíně. Ukážeme vám, co máme k dispozici, a doporučíme, co se k vaší akci hodí nejvíc.</p>
+      <a href="tel:+420704024456" class="btn btn-primary">Zavolat do Camelie</a>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="namiru">
+  <div class="wrap custom-grid">
+    <div class="reveal">
+      <div class="eyebrow">Zakázková výroba</div>
+      <h2>Dekorace přesně podle vašeho přání.</h2>
+      <p style="margin-top:20px;color:var(--ink-soft);font-size:1.08rem">Vytváříme dekorace z umělých květin a tropických plodů na míru. Máte na mysli konkrétní barvu, styl nebo motiv? Řekněte nám, co potřebujete — a my to pro vás sestavíme.</p>
+      <div style="margin-top:36px" class="cta-row">
+        <a href="#kontakt" class="btn btn-primary">Poptat dekoraci na míru</a>
+      </div>
+    </div>
+    <div class="custom-visual reveal"></div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Kontakt</div>
+      <h2>Najdete nás v srdci Zlína.</h2>
+      <p>Nám. Míru 5278, budova McDonald, první patro. Stavte se — rádi vás provedeme.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="info-row">
+          <div class="info-label">Adresa</div>
+          <div class="info-value">nám. Míru 5278<br>760 01 Zlín</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Telefon</div>
+          <div class="info-value"><a href="tel:+420704024456">+420 704 024 456</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">E-mail</div>
+          <div class="info-value"><a href="mailto:camelia.zlin@seznam.cz">camelia.zlin@seznam.cz</a></div>
+        </div>
+      </div>
+      <div class="hours reveal">
+        <h3>Otevírací doba</h3>
+        <div class="hours-row"><span class="day">Pondělí – Pátek</span><span class="time">9:00 – 18:00</span></div>
+        <div class="hours-row"><span class="day">Sobota</span><span class="time">9:00 – 12:00</span></div>
+        <div class="hours-row closed"><span class="day">Neděle</span><span class="time">zavřeno</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <span class="brand">Camelia<span style="color:var(--gold)">.</span></span>
+      <div>nám. Míru 5278, 760 01 Zlín · +420 704 024 456</div>
+    </div>
+    <div class="made-by">Web vytvořil <a href="https://kudlimarketing.cz">Kudli.marketing</a></div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
